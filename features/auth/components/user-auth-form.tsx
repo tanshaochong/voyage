@@ -4,7 +4,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Github, Loader2 } from 'lucide-react';
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
 import * as z from 'zod';
 
 import { buttonVariants } from '@/components/ui/button';
@@ -40,20 +39,16 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
   const [isGitHubLoading, setIsGitHubLoading] = React.useState<boolean>(false);
   const [isGoogleLoading, setIsGoogleLoading] = React.useState<boolean>(false);
 
-  const navigate = useNavigate();
-
   async function onSubmit(data: FormData) {
     setIsLoading(true);
     if (type == 'login') {
       handleLogin(data.email, data.password).then(() => {
         setIsLoading(false);
-        navigate('/');
       });
     }
     if (type == 'register') {
       handleRegister(data.email, data.password).then(() => {
         setIsLoading(false);
-        navigate('/');
       });
     }
   }
@@ -122,7 +117,6 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
             setIsGoogleLoading(true);
             handleGoogleOAuth().then(() => {
               setIsGoogleLoading(false);
-              navigate('/');
             });
           }}
           disabled={isGoogleLoading}

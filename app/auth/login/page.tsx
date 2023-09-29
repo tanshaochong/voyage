@@ -1,16 +1,16 @@
 import { ChevronLeft, Leaf } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-import { UserAuthForm } from './user-auth-form';
+import { UserAuthForm } from '../../../features/auth/components/user-auth-form';
 
 export default function LoginPage() {
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
       <Link
-        to="/"
+        href="/"
         className={cn(
           buttonVariants({ variant: 'ghost' }),
           'absolute left-4 top-4 md:left-8 md:top-8'
@@ -34,7 +34,7 @@ export default function LoginPage() {
         <UserAuthForm type="login" />
         <p className="px-8 text-center text-sm text-muted-foreground">
           <Link
-            to="/auth/register"
+            href="/auth/register"
             className="hover:text-brand underline underline-offset-4"
           >
             Don&apos;t have an account? Sign Up

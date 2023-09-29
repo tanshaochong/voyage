@@ -1,5 +1,6 @@
+'use client';
+
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -15,8 +16,6 @@ import { handleLogout } from '@/features/auth';
 
 const LogoutDialogue = () => {
   const [open, setOpen] = useState(false);
-
-  const navigate = useNavigate();
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
@@ -39,15 +38,7 @@ const LogoutDialogue = () => {
           >
             Cancel
           </Button>
-          <Button
-            onClick={() => {
-              handleLogout().then(() => {
-                navigate('.', { replace: true });
-              });
-            }}
-          >
-            Logout
-          </Button>
+          <Button onClick={() => {}}>Logout</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

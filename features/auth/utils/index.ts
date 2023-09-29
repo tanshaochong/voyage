@@ -15,7 +15,7 @@ import { auth, googleAuthProvider } from '@/config/firebase';
 export const handleGoogleOAuth = async () => {
   return signInWithPopup(auth, googleAuthProvider)
     .then((result) => {
-      if (import.meta.env.MODE == 'development') {
+      if (process.env.MODE == 'development') {
         // The signed-in user info.
         const user = result.user;
         console.log(user);
@@ -26,7 +26,7 @@ export const handleGoogleOAuth = async () => {
       });
     })
     .catch((error) => {
-      if (import.meta.env.MODE == 'development') {
+      if (process.env.MODE == 'development') {
         console.log(error);
       }
     });
@@ -35,7 +35,7 @@ export const handleGoogleOAuth = async () => {
 export const handleRegister = async (email: string, password: string) => {
   return createUserWithEmailAndPassword(auth, email, password)
     .then((result) => {
-      if (import.meta.env.MODE == 'development') {
+      if (process.env.MODE == 'development') {
         // The signed-in user info.
         const user = result.user;
         console.log(user);
@@ -46,7 +46,7 @@ export const handleRegister = async (email: string, password: string) => {
       });
     })
     .catch((error) => {
-      if (import.meta.env.MODE == 'development') {
+      if (process.env.MODE == 'development') {
         console.log(error);
       }
       toast({
@@ -60,14 +60,14 @@ export const handleRegister = async (email: string, password: string) => {
 export const handleLogin = async (email: string, password: string) => {
   return signInWithEmailAndPassword(auth, email, password)
     .then((result) => {
-      if (import.meta.env.MODE == 'development') {
+      if (process.env.MODE == 'development') {
         // The signed-in user info.
         const user = result.user;
         console.log(user);
       }
     })
     .catch((error) => {
-      if (import.meta.env.MODE == 'development') {
+      if (process.env.MODE == 'development') {
         console.log(error);
       }
     });
@@ -77,7 +77,7 @@ export const handleResetPassword = async (email: string) => {
   return sendPasswordResetEmail(auth, email)
     .then(() => {})
     .catch((error) => {
-      if (import.meta.env.MODE == 'development') {
+      if (process.env.MODE == 'development') {
         console.log(error);
       }
     });
