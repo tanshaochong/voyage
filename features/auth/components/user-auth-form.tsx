@@ -2,6 +2,8 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Github, Loader2 } from 'lucide-react';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -14,11 +16,8 @@ import {
   handleLogin,
   handleRegister,
 } from '@/features/auth';
-// import { toast } from "@/components/ui/use-toast"
 import { cn } from '@/lib/utils';
 import { userAuthSchema } from '@/lib/validations/auth';
-
-import GoogleIcon from '../assets/google.svg';
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   type: 'login' | 'register';
@@ -44,14 +43,18 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
     if (type == 'login') {
       handleLogin(data.email, data.password).then(() => {
         setIsLoading(false);
+        router.push('/');
       });
     }
     if (type == 'register') {
       handleRegister(data.email, data.password).then(() => {
         setIsLoading(false);
+        router.push('/');
       });
     }
   }
+
+  const router = useRouter();
 
   return (
     <div className={cn('grid gap-6', className)} {...props}>
@@ -117,6 +120,7 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
             setIsGoogleLoading(true);
             handleGoogleOAuth().then(() => {
               setIsGoogleLoading(false);
+              router.push('/');
             });
           }}
           disabled={isGoogleLoading}
@@ -124,7 +128,13 @@ export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
           {isGoogleLoading ? (
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
           ) : (
-            <img src={GoogleIcon} className="mr-2 h-4 w-4" />
+            <Image
+              src={'/assets/google.svg'}
+              alt="google"
+              className="mr-2 h-4 w-4"
+              height={16}
+              width={16}
+            />
           )}
           Google
         </button>

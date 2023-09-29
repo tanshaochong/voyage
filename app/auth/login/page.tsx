@@ -1,3 +1,4 @@
+'use client';
 import { ChevronLeft, Leaf } from 'lucide-react';
 import Link from 'next/link';
 
@@ -16,10 +17,8 @@ export default function LoginPage() {
           'absolute left-4 top-4 md:left-8 md:top-8'
         )}
       >
-        <>
-          <ChevronLeft className="mr-2 h-4 w-4" />
-          Back
-        </>
+        <ChevronLeft className="mr-2 h-4 w-4" />
+        Back
       </Link>
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
         <div className="flex flex-col space-y-2 text-center">
@@ -34,7 +33,7 @@ export default function LoginPage() {
         <UserAuthForm type="login" />
         <p className="px-8 text-center text-sm text-muted-foreground">
           <Link
-            href="/auth/register"
+            href={'/auth/register'}
             className="hover:text-brand underline underline-offset-4"
           >
             Don&apos;t have an account? Sign Up

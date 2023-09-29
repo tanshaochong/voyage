@@ -6,13 +6,14 @@ import {
   signOut,
 } from 'firebase/auth';
 
+import { auth, googleAuthProvider } from '@/app/firebase';
 import { toast } from '@/components/ui/use-toast';
-import { auth, googleAuthProvider } from '@/config/firebase';
 // const parseFirebaseAuthError = (errorCode: string): string => {
 //     return errorCode.substring(5, errorCode.length).replaceAll("-", " ");
 // };
 
 export const handleGoogleOAuth = async () => {
+  console.log('hello');
   return signInWithPopup(auth, googleAuthProvider)
     .then((result) => {
       if (process.env.MODE == 'development') {

@@ -1,12 +1,19 @@
+'use client';
+
 import { ChevronLeft } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-import notFoundImage from '../assets/not_found.svg';
-
-export default function NotFoundPage() {
+export default function NotFound({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
       <Link
@@ -21,7 +28,12 @@ export default function NotFoundPage() {
           Back
         </>
       </Link>
-      <img src={notFoundImage} alt="not-found" className="mb-12 w-1/3" />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={'/assets/not_found.svg'}
+        alt="not-found"
+        className="mb-12 w-1/3"
+      />
       <p className="text-xl font-semibold italic mb-10">
         Oops! You&apos;ve wandered into the abyss. Let&apos;s get you back on
         track.

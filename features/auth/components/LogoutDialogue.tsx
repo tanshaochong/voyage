@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
@@ -13,14 +13,15 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { handleLogout } from '@/features/auth';
+import { cn } from '@/lib/utils';
 
 const LogoutDialogue = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger>
-        <Button>Logout</Button>
+      <DialogTrigger className={cn(buttonVariants({ variant: 'default' }))}>
+        Logout
       </DialogTrigger>
       <DialogContent className="sm:max-w-[400px]">
         <DialogHeader>
@@ -38,7 +39,15 @@ const LogoutDialogue = () => {
           >
             Cancel
           </Button>
-          <Button onClick={() => {}}>Logout</Button>
+          <Button
+            onClick={() => {
+              handleLogout().then(() => {
+                setOpen(false);
+              });
+            }}
+          >
+            Logout
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
