@@ -47,7 +47,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 min-h-screen max-h-screen">
-          <aside className="flex flex-col max-h-screen py-3 lg:bg-light lg:w-1/6 px-2 border-r-gray-200 border-2 rounded-lg ml-4 my-2">
+          <aside className="flex flex-col max-h-screen pb-4 pt-8 lg:bg-light lg:w-1/6 px-2 border-r-gray-200 border-2 rounded-lg ml-4 my-2">
             <Link href="/home">
               <Image
                 src="/assets/Voyage.png"
