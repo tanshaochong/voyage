@@ -2,6 +2,7 @@
 
 import { ChatRequest, FunctionCallHandler, nanoid } from 'ai';
 import { useChat, useCompletion } from 'ai/react';
+import { ArrowRight } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 
 import Chat from '@/components/chat';
@@ -94,14 +95,7 @@ const InterpersonalPage = () => {
     onFinish: () => {
       if (chatRef && chatRef.current) {
         chatRef.current.scrollIntoView({ behavior: 'smooth' });
-        console.log('hey');
       }
-    },
-    onError: () => {
-      toast({
-        title: 'An error occured.',
-        description: 'Please refresh the page.',
-      });
     },
   });
 
@@ -126,7 +120,7 @@ const InterpersonalPage = () => {
       <h1 className="text-3xl font-semibold text-left mr-auto mb-4">
         Hi {FIREBASE_USER.displayName.split(' ')[0]},
         <br />
-        Let&apos;s find out more from our AI career coach
+        Let&apos;s find out more from our intelligent career coach
       </h1>
       {/* <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Strengths & Areas for Improvement
@@ -164,6 +158,7 @@ const InterpersonalPage = () => {
                       }}
                     >
                       Learn more
+                      <ArrowRight className="ml-2" />
                     </Button>
                   </CardContent>
                 </Card>

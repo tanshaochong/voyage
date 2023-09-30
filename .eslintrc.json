@@ -1,7 +1,7 @@
 {
   "root": true,
   "extends": ["next/core-web-vitals", "prettier"],
-  "ignorePatterns": ["dist", ".eslintrc.json"],
+  "ignorePatterns": ["dist", ".eslintrc.json", "components/ui"],
   "plugins": ["simple-import-sort"],
   "rules": {
     "simple-import-sort/imports": "error",

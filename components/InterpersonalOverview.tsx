@@ -1,6 +1,7 @@
 'use client';
 import { ChatRequest, FunctionCallHandler, nanoid } from 'ai';
 import { useChat } from 'ai/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -58,7 +59,17 @@ const InterpersonalOverview = () => {
   return (
     <Card className="flex flex-col">
       <CardHeader>
-        <CardTitle>Based on your feedbacks</CardTitle>
+        <CardTitle>
+          Based on your feedbacks
+          <span className="ml-4 align-middle text-xs font-light text-muted-foreground">
+            powered by {/* eslint-disable-next-line @next/next/no-img-element*/}
+            <img
+              src="/assets/OpenAI_Logo.png"
+              alt=""
+              className="mb-0.5 ml-1 inline-block h-4 align-middle"
+            />
+          </span>
+        </CardTitle>
         <CardDescription>
           Here is what your colleagues have to say about you
         </CardDescription>
