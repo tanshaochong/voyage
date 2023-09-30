@@ -14,7 +14,7 @@ export function FeedbackFormDialog() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline">
+        <Button variant="default">
           <MessageSquareIcon className="h-5 mr-3" />
           Send feedback
         </Button>
