@@ -21,6 +21,7 @@
     "firebase": "^10.4.0",
     "lucide-react": "^0.279.0",
     "next": "latest",
+    "openai-edge": "^1.2.2",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.46.2",
