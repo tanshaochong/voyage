@@ -1,4 +1,5 @@
 import { ArrowLeft, ArrowRightCircle, MessageSquareIcon } from 'lucide-react';
+import Link from 'next/link';
 
 import { FeedbackForm } from '@/components/home/FeedbackForm';
 import { ProfileInfo } from '@/components/home/ProfileInfo';
@@ -17,6 +18,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -26,6 +28,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { ToastAction } from '@/components/ui/toast';
+import { cn } from '@/lib/utils';
 
 export default function HomePage() {
   return (
@@ -36,19 +39,19 @@ export default function HomePage() {
             <CardTitle>Welcome Back.</CardTitle>
           </CardHeader>
           <Avatar className="w-44 h-44 mt-5">
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage />
+            <AvatarFallback>LG</AvatarFallback>
           </Avatar>
 
-          <div className="mt-5 mb-1 text-2xl font-semibold">John Doe</div>
+          <div className="mt-5 mb-1 text-2xl font-semibold">Lalit Goel</div>
           <small className="text-xl font-light leading-none mb-10">
-            Senior Manager
+            Staff Engineer
           </small>
 
           <ProfileInfo />
 
           <Alert className="">
-            <AlertTitle>New Course Available!</AlertTitle>
+            <AlertTitle>New courses available!</AlertTitle>
             <AlertDescription>
               Check out new courses to boost your performance.
             </AlertDescription>
@@ -68,10 +71,13 @@ export default function HomePage() {
             <Progress />
           </CardContent>
           <CardFooter className="flex justify-end">
-            <Button>
+            <Link
+              href="/overview"
+              className={cn(buttonVariants({ variant: 'default' }))}
+            >
               Find out more
               <ArrowRightCircle className="ml-3" />
-            </Button>
+            </Link>
           </CardFooter>
         </Card>
         <Card className="h-fit">

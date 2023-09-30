@@ -40,7 +40,7 @@ export function ProfileInfo() {
             Wellbeing fundamentals
           </p>
         </div>
-        <div className="ml-auto mr-5 mr-4 font-medium">30</div>
+        <div className="ml-auto mr-5 font-medium">30</div>
       </div>
     </div>
   );
