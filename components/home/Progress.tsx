@@ -2,37 +2,23 @@
 
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
-const data = [
-  {
-    name: 'Leadership',
-    total: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Crane',
-    total: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Teamwork',
-    total: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Python',
-    total: Math.floor(Math.random() * 100),
-  },
-  {
-    name: 'Wellbeing',
-    total: Math.floor(Math.random() * 100),
-  },
-];
+interface Skill {
+  title: String;
+  level: number;
+}
 
-export function Progress() {
+interface ProfileInfoProps {
+  skills: Skill[];
+}
+
+export function Progress({ skills }: ProfileInfoProps) {
   return (
     <ResponsiveContainer width="100%" height={350}>
-      <BarChart data={data}>
+      <BarChart data={skills}>
         <XAxis
-          dataKey="name"
+          dataKey="title"
           stroke="#000000"
-          fontSize={12}
+          fontSize={10}
           tickLine={false}
           axisLine={false}
         />
@@ -42,8 +28,10 @@ export function Progress() {
           tickLine={false}
           axisLine={false}
           tickFormatter={(value) => `${value}`}
+          type="number"
+          domain={[0, 100]}
         />
-        <Bar dataKey="total" fill="#000000" radius={[10, 10, 0, 0]} />
+        <Bar dataKey="level" fill="#000000" radius={[10, 10, 0, 0]} />
       </BarChart>
     </ResponsiveContainer>
   );
