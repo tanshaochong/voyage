@@ -126,7 +126,7 @@ const InterpersonalPage = () => {
         Strengths & Areas for Improvement
       </h2> */}
       <div className="grid grid-cols-2 gap-6 grow overflow-hidden">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 overflow-y-auto">
           {feedback &&
             Object.entries(feedback).map(([key, value], idx) => {
               return isSummaryLoading ? (
