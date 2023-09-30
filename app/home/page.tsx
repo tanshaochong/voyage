@@ -1,6 +1,8 @@
-'use client';
+import { ArrowLeft, ArrowRightCircle, MessageSquareIcon } from 'lucide-react';
 
 import { FeedbackForm } from '@/components/home/FeedbackForm';
+import { ProfileInfo } from '@/components/home/ProfileInfo';
+import { Progress } from '@/components/home/Progress';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import {
   AlertDialog,
@@ -24,13 +26,15 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { ToastAction } from '@/components/ui/toast';
-import { useToast } from '@/components/ui/use-toast';
 
 export default function HomePage() {
   return (
-    <div className="container flex justify-center w-full h-full columns-2 gap-5 p-5 box-border">
-      <div className="justify-center items-center w-full h-full">
-        <Card className=" p-3 flex flex-col h-full justify-center items-center">
+    <div className="flex justify-center w-full h-full box-border columns-2 gap-5 p-5 ">
+      <div className="justify-center items-center w-full h-fit flex flex-col">
+        <Card className=" p-6 h-full flex flex-col justify-center items-center">
+          <CardHeader>
+            <CardTitle>Welcome Back.</CardTitle>
+          </CardHeader>
           <Avatar className="w-44 h-44 mt-5">
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
@@ -41,31 +45,43 @@ export default function HomePage() {
             Senior Manager
           </small>
 
+          <ProfileInfo />
+
           <Alert className="">
             <AlertTitle>New Course Available!</AlertTitle>
             <AlertDescription>
-              Check out these new courses to boost your performance.
+              Check out new courses to boost your performance.
             </AlertDescription>
           </Alert>
+          <div className="w-full h-full gap-5 flex justify-center mt-5">
+            <Button>Logout</Button>
+          </div>
         </Card>
       </div>
       <div className="w-full h-full flex flex-col">
-        <Card className="h-full mb-5">
+        <Card className="h-fit w-full mb-5">
           <CardHeader>
-            <CardTitle>Check out your thing.</CardTitle>
-            <CardDescription>View your recommendations here!</CardDescription>
-          </CardHeader>
-          <CardFooter className="flex justify-end">
-            <Button>Find out more</Button>
-          </CardFooter>
-        </Card>
-        <Card className="h-full">
-          <CardHeader>
-            <CardTitle>Give some feedback.</CardTitle>
+            <CardTitle>Track your progress</CardTitle>
+            <CardDescription>Your PSA journey, at a glance</CardDescription>
           </CardHeader>
           <CardContent>
-            <FeedbackFormDialog />
+            <Progress />
           </CardContent>
+          <CardFooter className="flex justify-end">
+            <Button>
+              Find out more
+              <ArrowRightCircle className="ml-3" />
+            </Button>
+          </CardFooter>
+        </Card>
+        <Card className="h-fit">
+          <CardHeader>
+            <CardTitle>Give feedback, to anyone</CardTitle>
+          </CardHeader>
+          <CardContent>Give feedback to your peers.</CardContent>
+          <CardFooter className="justify-end align-bottom h-fit pr-5">
+            <FeedbackFormDialog />
+          </CardFooter>
         </Card>
       </div>
     </div>
@@ -76,7 +92,10 @@ export function FeedbackFormDialog() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="outline">Send Feedback</Button>
+        <Button variant="outline">
+          <MessageSquareIcon className="h-5 mr-3" />
+          Send Feedback
+        </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <FeedbackForm />
