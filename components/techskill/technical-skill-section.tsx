@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { Category } from '@/app/technical/page';
-import CourseCard from '@/components/technical-course-card';
+import CourseCard from '@/components/techskill/technical-course-card';
 import { Button } from '@/components/ui/button';
 
 export default function SkillSection({
@@ -37,7 +37,7 @@ export default function SkillSection({
       {renderCourseCards()}
       {courseCategory.courses.length > 3 && (
         <Button
-          className="my-5 hover:shadow-lg"
+          className="my-5 hover:shadow-lg text-base"
           variant="outline"
           size="lg"
           onClick={() => setShowMore(!showMore)}
