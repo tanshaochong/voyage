@@ -3,6 +3,7 @@ export const FIREBASE_USER = {
   displayName: 'John Doe',
   email: 'johndoe@psa.sg',
   photoURL: '',
+  currentPos: 'Staff Engineer',
 };
 
 export const RAW_FEEDBACK = [
