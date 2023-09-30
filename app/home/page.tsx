@@ -1,3 +1,6 @@
+'use client';
+
+import { FeedbackForm } from '@/components/home/FeedbackForm';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import {
   AlertDialog,
@@ -20,6 +23,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { ToastAction } from '@/components/ui/toast';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function HomePage() {
   return (
@@ -59,7 +64,7 @@ export default function HomePage() {
             <CardTitle>Give some feedback.</CardTitle>
           </CardHeader>
           <CardContent>
-            <FeedbackForm />
+            <FeedbackFormDialog />
           </CardContent>
         </Card>
       </div>
@@ -67,15 +72,14 @@ export default function HomePage() {
   );
 }
 
-export function FeedbackForm() {
+export function FeedbackFormDialog() {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="outline">Send Feedback</Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
-        <AlertDialogCancel>Cancel</AlertDialogCancel>
-        <AlertDialogAction>Continue</AlertDialogAction>
+        <FeedbackForm />
       </AlertDialogContent>
     </AlertDialog>
   );

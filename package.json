@@ -27,7 +27,8 @@
     "react-dom": "latest",
     "react-hook-form": "^7.46.2",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@types/node": "latest",
