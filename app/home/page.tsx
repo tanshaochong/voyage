@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRightCircle, MessageSquareIcon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, MessageSquareIcon } from 'lucide-react';
 import Link from 'next/link';
 
 import { FeedbackForm } from '@/components/home/FeedbackForm';
@@ -32,24 +32,18 @@ import { cn } from '@/lib/utils';
 
 export default function HomePage() {
   return (
-    <div className="flex justify-center w-full h-full box-border columns-2 gap-5 p-5 ">
-      <div className="justify-center items-center w-full h-fit flex flex-col">
-        <Card className=" p-6 h-full flex flex-col justify-center items-center">
-          <CardHeader>
-            <CardTitle>Welcome Back.</CardTitle>
-          </CardHeader>
-          <Avatar className="w-44 h-44 mt-5">
+    <div className="container grid grid-cols-2 justify-center w-full h-full box-border gap-4 py-8">
+      <div className="justify-center items-center w-full flex flex-col grow">
+        <Card className="p-6 h-full w-full flex flex-col justify-center items-center">
+          <Avatar className="w-24 h-24">
             <AvatarImage />
             <AvatarFallback>LG</AvatarFallback>
           </Avatar>
-
           <div className="mt-5 mb-1 text-2xl font-semibold">Lalit Goel</div>
-          <small className="text-xl font-light leading-none mb-10">
+          <small className="text-base font-light leading-none mb-10">
             Staff Engineer
           </small>
-
           <ProfileInfo />
-
           <Alert className="">
             <AlertTitle>New courses available!</AlertTitle>
             <AlertDescription>
@@ -73,18 +67,18 @@ export default function HomePage() {
           <CardFooter className="flex justify-end">
             <Link
               href="/overview"
-              className={cn(buttonVariants({ variant: 'default' }))}
+              className={cn(buttonVariants({ variant: 'outline' }))}
             >
+              <ArrowRight className="h-5 mr-3" />
               Find out more
-              <ArrowRightCircle className="ml-3" />
             </Link>
           </CardFooter>
         </Card>
         <Card className="h-fit">
           <CardHeader>
             <CardTitle>Give feedback, to anyone</CardTitle>
+            <CardDescription>Give feedback to your peers</CardDescription>
           </CardHeader>
-          <CardContent>Give feedback to your peers.</CardContent>
           <CardFooter className="justify-end align-bottom h-fit pr-5">
             <FeedbackFormDialog />
           </CardFooter>
