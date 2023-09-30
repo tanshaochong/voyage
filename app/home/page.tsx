@@ -1,9 +1,7 @@
 import { ArrowRight, MessageSquareIcon } from 'lucide-react';
 import Link from 'next/link';
 
-import { FeedbackForm } from '@/components/home/FeedbackForm';
-import { ProfileInfo } from '@/components/home/ProfileInfo';
-import { Progress } from '@/components/home/Progress';
+import { FeedbackForm, Goals, ProfileInfo, Progress } from '@/components/home/';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import {
   AlertDialog,
@@ -50,16 +48,17 @@ export default function HomePage() {
             </small>
           </div>
           <ProfileInfo skills={USER.skills} />
-          <Alert>
+          {/* <Alert>
             <AlertTitle>New courses available!</AlertTitle>
             <AlertDescription>
               Check out new courses to boost your performance.
             </AlertDescription>
-          </Alert>
+          </Alert> */}
+          <Goals />
         </Card>
       </div>
-      <div className="w-full h-full flex flex-col">
-        <Card className="h-fit w-full mb-5">
+      <div className="w-full flex flex-col grow">
+        <Card className="w-full flex flex-col grow mb-5">
           <CardHeader>
             <CardTitle>Track your progress</CardTitle>
             <CardDescription>Your PSA journey, at a glance</CardDescription>
@@ -67,17 +66,17 @@ export default function HomePage() {
           <CardContent>
             <Progress skills={USER.skills} />
           </CardContent>
-          <CardFooter className="flex justify-end">
+          <CardFooter className="mt-auto">
             <Link
               href="/overview"
-              className={cn(buttonVariants({ variant: 'outline' }))}
+              className={cn(buttonVariants({ variant: 'outline' }), 'ml-auto')}
             >
               <ArrowRight className="h-5 mr-3" />
               Find out more
             </Link>
           </CardFooter>
         </Card>
-        <Card className="h-fit">
+        <Card className="w-full">
           <CardHeader>
             <CardTitle>Give feedback, to anyone</CardTitle>
             <CardDescription>Give feedback to your peers</CardDescription>
