@@ -1,4 +1,6 @@
-import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
+import { buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -7,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 const InterpersonalOverview = () => {
   return (
@@ -26,10 +29,15 @@ const InterpersonalOverview = () => {
         </p>
       </CardContent>
       <CardFooter>
-        <p className="text-sm text-muted-foreground ml-auto w-[150px] italic text-right mr-4">
+        <p className="text-sm text-muted-foreground ml-auto w-[200px] italic text-right mr-4">
           Find out how you can improve these soft skills
         </p>
-        <Button>Tell me more</Button>
+        <Link
+          href="/interpersonal"
+          className={cn(buttonVariants({ variant: 'default' }))}
+        >
+          Tell me more
+        </Link>
       </CardFooter>
     </Card>
   );

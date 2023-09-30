@@ -1,5 +1,7 @@
+import Link from 'next/link';
+
 import CourseCard from '@/components/CourseCard';
-import { Button } from '@/components/ui/button';
+import { buttonVariants } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -8,6 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 const TechnicalOverview = () => {
   return (
@@ -27,7 +30,12 @@ const TechnicalOverview = () => {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="ml-auto">More details</Button>
+        <Link
+          href="/interpersonal"
+          className={cn(buttonVariants({ variant: 'default' }), 'ml-auto')}
+        >
+          More details
+        </Link>
       </CardFooter>
     </Card>
   );
