@@ -37,8 +37,8 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
           key={item.href}
           className={cn(
             pathname === item.href
-              ? 'bg-muted hover:bg-muted'
-              : 'hover:bg-muted hover:underline',
+              ? 'bg-muted hover:bg-muted cursor-pointer'
+              : 'hover:bg-muted cursor-pointer',
             'flex flex-row items-center p-2 rounded'
           )}
         >
