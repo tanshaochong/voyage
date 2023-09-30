@@ -12,8 +12,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { handleLogout } from '@/features/auth';
 import { cn } from '@/lib/utils';
+import { handleLogout } from '@/utils/authUtils';
 
 const LogoutDialogue = () => {
   const [open, setOpen] = useState(false);

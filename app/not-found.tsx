@@ -15,19 +15,7 @@ export default function NotFound({
   reset: () => void;
 }) {
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
-      <Link
-        href="/"
-        className={cn(
-          buttonVariants({ variant: 'ghost' }),
-          'absolute left-4 top-4 md:left-8 md:top-8'
-        )}
-      >
-        <>
-          <ChevronLeft className="mr-2 h-4 w-4" />
-          Back
-        </>
-      </Link>
+    <div className="container flex h-screen flex-col items-center justify-center">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={'/assets/not_found.svg'}
@@ -38,7 +26,7 @@ export default function NotFound({
         Oops! You&apos;ve wandered into the abyss. Let&apos;s get you back on
         track.
       </p>
-      <Link href="/" className={cn(buttonVariants({ variant: 'default' }))}>
+      <Link href="/home" className={cn(buttonVariants({ variant: 'default' }))}>
         Back to Home
       </Link>
     </div>

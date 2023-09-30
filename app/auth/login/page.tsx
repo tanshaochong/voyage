@@ -1,11 +1,11 @@
 'use client';
+
 import { ChevronLeft, Leaf } from 'lucide-react';
 import Link from 'next/link';
 
+import UserAuthForm from '@/components/auth/user-auth-form';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-
-import { UserAuthForm } from '../../../features/auth/components/user-auth-form';
 
 export default function LoginPage() {
   return (

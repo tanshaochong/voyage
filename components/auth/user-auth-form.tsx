@@ -11,13 +11,13 @@ import * as z from 'zod';
 import { buttonVariants } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { cn } from '@/lib/utils';
+import { userAuthSchema } from '@/lib/validations/auth';
 import {
   handleGoogleOAuth,
   handleLogin,
   handleRegister,
-} from '@/features/auth';
-import { cn } from '@/lib/utils';
-import { userAuthSchema } from '@/lib/validations/auth';
+} from '@/utils/authUtils';
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
   type: 'login' | 'register';
@@ -25,7 +25,11 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
 
 type FormData = z.infer<typeof userAuthSchema>;
 
-export function UserAuthForm({ className, type, ...props }: UserAuthFormProps) {
+export default function UserAuthForm({
+  className,
+  type,
+  ...props
+}: UserAuthFormProps) {
   const {
     register,
     handleSubmit,

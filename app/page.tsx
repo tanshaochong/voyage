@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 import { auth } from '@/app/firebase';
+import LogoutDialogue from '@/components/auth/LogoutDialogue';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Toaster } from '@/components/ui/toaster';
-import LogoutDialogue from '@/features/auth/components/LogoutDialogue';
 import { cn } from '@/lib/utils';
 
 export default function Home() {
