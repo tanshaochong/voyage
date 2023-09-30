@@ -23,7 +23,7 @@ export type Categories = {
 export default function TechnicalSkillPage() {
   return (
     <div className="container py-4">
-      <h1 className="text-3xl font-semibold text-left mr-auto mb-8">
+      <h1 className="text-3xl font-semibold text-left mr-auto mb-4">
         Hi {FIREBASE_USER.displayName.split(' ')[0]},
         <br />
         Let&apos;s empower your career with these curated courses

@@ -17,6 +17,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Skeleton } from '@/components/ui/skeleton';
 import { toast } from '@/components/ui/use-toast';
+import { FIREBASE_USER } from '@/data/data';
 import { RAW_FEEDBACK } from '@/data/data';
 import { cn } from '@/lib/utils';
 
@@ -121,10 +122,15 @@ const InterpersonalPage = () => {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-2rem)] flex flex-col gap-2">
-      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
+    <div className="container py-4 w-full h-[calc(100vh-2rem)] flex flex-col gap-2">
+      <h1 className="text-3xl font-semibold text-left mr-auto mb-4">
+        Hi {FIREBASE_USER.displayName.split(' ')[0]},
+        <br />
+        Let&apos;s find out more from our AI career coach
+      </h1>
+      {/* <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Strengths & Areas for Improvement
-      </h2>
+      </h2> */}
       <div className="grid grid-cols-2 gap-6 grow overflow-hidden">
         <div className="flex flex-col gap-2">
           {feedback &&
