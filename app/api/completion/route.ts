@@ -1,34 +1,53 @@
 import { OpenAIStream, StreamingTextResponse } from 'ai';
 import OpenAI from 'openai';
+import type { ChatCompletionCreateParams } from 'openai/resources/chat/completions';
 
-// Create an OpenAI API client (that's edge friendly!)
+import { RAW_FEEDBACK } from '@/data/data';
+
+const functions: ChatCompletionCreateParams.Function[] = [
+  {
+    name: 'summarise_feedback',
+    description:
+      'imagine you are a career coach, and someone came to you to summarise the feedback received by him, give him 2 positive and 1 area for improvement. refer to the him as "You" ',
+    parameters: {
+      type: 'object',
+      properties: {
+        positive1: {
+          type: 'string',
+          description:
+            'first positive feedback in one phrase. refer to the recipient as "You"',
+        },
+        positive2: {
+          type: 'string',
+          description:
+            'second positive feedback in one phrase. refer to the recipient as "You"',
+        },
+        afi: {
+          type: 'string',
+          description:
+            'one area for improvement in one phrase. refer to the recipient as "You"',
+        },
+      },
+      required: ['positive1', 'positive2', 'afi'],
+    },
+  },
+];
+
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY!,
 });
 
-// Set the runtime to edge for best performance
-export const runtime = 'edge';
-
+// And use it like this:
 export async function POST(req: Request) {
-  const { prompt } = await req.json();
+  const { messages } = await req.json();
 
-  // Ask OpenAI for a streaming completion given the prompt
-  const response = await openai.completions.create({
-    model: 'text-davinci-003',
+  const response = await openai.chat.completions.create({
+    model: 'gpt-3.5-turbo-0613',
     stream: true,
-    temperature: 0.6,
-    max_tokens: 300,
-    prompt: `Create three slogans for a business with unique features.
- 
-Business: Bookstore with cats
-Slogans: "Purr-fect Pages", "Books and Whiskers", "Novels and Nuzzles"
-Business: Gym with rock climbing
-Slogans: "Peak Performance", "Reach New Heights", "Climb Your Way Fit"
-Business: ${prompt}
-Slogans:`,
+    messages: messages,
+    functions,
   });
-  // Convert the response into a friendly text-stream
+  //@ts-ignore
   const stream = OpenAIStream(response);
-  // Respond with the stream
   return new StreamingTextResponse(stream);
 }
