@@ -31,7 +31,7 @@ const TechnicalOverview = () => {
       </CardContent>
       <CardFooter>
         <Link
-          href="/interpersonal"
+          href="/technical"
           className={cn(buttonVariants({ variant: 'default' }), 'ml-auto')}
         >
           More details
