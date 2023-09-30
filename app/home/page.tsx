@@ -74,7 +74,17 @@ export default function HomePage() {
               </CardDescription>
             </CardHeader>
             <CardFooter className="justify-end">
-              <FeedbackFormDialog />
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button variant="default">
+                    <MessageSquareIcon className="h-5 mr-3" />
+                    Send feedback
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <FeedbackForm />
+                </AlertDialogContent>
+              </AlertDialog>
             </CardFooter>
           </Card>
           <Card className="w-full flex flex-col grow">
