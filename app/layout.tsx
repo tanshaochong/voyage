@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 min-h-screen">
+        <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 min-h-screen max-h-screen">
           <aside className="flex flex-col max-h-screen py-4 lg:bg-light lg:w-1/6 px-2 border-r-gray-500 border-r-2">
             <Image
               src="/assets/Voyage.png"
