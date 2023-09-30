@@ -1,6 +1,8 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { Cross } from 'lucide-react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 
@@ -17,9 +19,17 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import { Toast } from '@/components/ui/toast';
 import { ToastAction } from '@/components/ui/toast';
-import { useToast } from '@/components/ui/use-toast';
+import { toast } from '@/components/ui/use-toast';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -44,14 +54,30 @@ export function FeedbackForm() {
     },
   });
 
+  const [success, setSuccess] = useState(false);
+
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
     console.log(values);
+    setSuccess(true);
+    showToast(true);
   }
 
-  const { toast } = useToast();
+  const showToast = (isSuccess: boolean) => {
+    if (isSuccess) {
+      toast({
+        title: 'Hooray! Your message has been sent.',
+        description: 'Thank you for your feedback!',
+      });
+    } else {
+      toast({
+        variant: 'destructive',
+        title: 'Uh oh! Something went wrong.',
+        description: 'There was a problem with your request.',
+        action: <ToastAction altText="Try again">Try again</ToastAction>,
+      });
+    }
+  };
 
   return (
     <Form {...form}>
@@ -102,19 +128,7 @@ export function FeedbackForm() {
         />
         <div className="justify-between flex">
           <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <Button
-            type="submit"
-            onClick={() => {
-              toast({
-                title: 'Hooray! Your message has been sent.',
-                description: 'Thank you for your feedback!',
-                action: <ToastAction altText="Dismiss">Dismiss</ToastAction>,
-              });
-              console.log('Toasting');
-            }}
-          >
-            Submit
-          </Button>
+          <Button type="submit">Submit</Button>
         </div>
       </form>
     </Form>

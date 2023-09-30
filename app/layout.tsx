@@ -10,6 +10,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { ProfileMenu } from '@/components/ui/profile-menu';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -59,6 +60,7 @@ export default function RootLayout({
             <SidebarNav items={sidebarNavItems} className="py-4" />
             <Separator className="mt-auto bg-transparent" />
             <ProfileMenu />
+            <Toaster />
           </aside>
           <ScrollArea className="h-screen w-5/6 p-4">{children}</ScrollArea>
         </div>
