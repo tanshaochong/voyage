@@ -1,4 +1,4 @@
-import { ArrowLeft, ArrowRight, MessageSquareIcon } from 'lucide-react';
+import { ArrowRight, MessageSquareIcon } from 'lucide-react';
 import Link from 'next/link';
 
 import { FeedbackForm } from '@/components/home/FeedbackForm';
@@ -7,13 +7,7 @@ import { Progress } from '@/components/home/Progress';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import {
   AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -27,8 +21,14 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { ToastAction } from '@/components/ui/toast';
+import { FIREBASE_USER, USER } from '@/data/data';
 import { cn } from '@/lib/utils';
+
+const extractInitials = (fullName: String): String => {
+  const words = fullName.split(' ');
+  const initials = words.map((word) => word.charAt(0).toUpperCase());
+  return initials.join('');
+};
 
 export default function HomePage() {
   return (
@@ -38,14 +38,18 @@ export default function HomePage() {
           <div>
             <Avatar className="w-24 h-24 mb-4">
               <AvatarImage />
-              <AvatarFallback>LG</AvatarFallback>
+              <AvatarFallback>
+                {extractInitials(FIREBASE_USER.displayName)}
+              </AvatarFallback>
             </Avatar>
-            <div className="text-2xl font-semibold">Lalit Goel</div>
+            <div className="text-2xl font-semibold">
+              {FIREBASE_USER.displayName}
+            </div>
             <small className="text-sm text-muted-foreground leading-none">
-              Staff Engineer
+              {USER.positions[USER.positions.length - 1].title}
             </small>
           </div>
-          <ProfileInfo />
+          <ProfileInfo skills={USER.skills} />
           <Alert>
             <AlertTitle>New courses available!</AlertTitle>
             <AlertDescription>
@@ -61,7 +65,7 @@ export default function HomePage() {
             <CardDescription>Your PSA journey, at a glance</CardDescription>
           </CardHeader>
           <CardContent>
-            <Progress />
+            <Progress skills={USER.skills} />
           </CardContent>
           <CardFooter className="flex justify-end">
             <Link
