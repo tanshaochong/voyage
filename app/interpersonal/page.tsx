@@ -3,6 +3,7 @@
 import { useChat, useCompletion } from 'ai/react';
 import { useEffect, useState } from 'react';
 
+import Chat from '@/components/chat';
 import { Button } from '@/components/ui/button';
 import {
   Card,
@@ -29,6 +30,7 @@ const InterpersonalPage = () => {
     isLoading,
   } = useChat({
     api: '/api/chat',
+    id: 'chat',
     initialMessages: [
       {
         id: 'system prompt',
@@ -97,31 +99,7 @@ const InterpersonalPage = () => {
               );
             })}
         </div>
-        <Card className="border-dashed border-2 flex flex-col overflow-hidden ">
-          <div className="flex flex-col grow overflow-auto">
-            <CardHeader>
-              <CardTitle>Learn more</CardTitle>
-            </CardHeader>
-            <CardContent className="">
-              {messages.slice(1).map((m, index) => (
-                <p key={index} className="pb-2">
-                  {m.role === 'user' ? 'User: ' : 'AI: '}
-                  {m.content}
-                </p>
-              ))}
-            </CardContent>
-          </div>
-          <CardFooter className="">
-            <form onSubmit={handleSubmit} className="w-full">
-              <Input
-                disabled={isLoading}
-                value={input}
-                placeholder="Ask questions to learn more..."
-                onChange={handleInputChange}
-              />
-            </form>
-          </CardFooter>
-        </Card>
+        <Chat />
       </div>
     </div>
   );
