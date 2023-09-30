@@ -30,8 +30,8 @@ export default function SkillSection({
   };
 
   return (
-    <section className="mx-10 leadership-section">
-      <h2 className="text-3xl my-5 font-weight:400 dark:text-white">
+    <section className="leadership-section">
+      <h2 className="text-2xl my-5 font-medium dark:text-white">
         {courseCategory.name}
       </h2>
       {renderCourseCards()}
