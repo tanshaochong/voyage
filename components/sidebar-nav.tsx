@@ -33,26 +33,16 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
       {...props}
     >
       {items.map((item) => (
-        <div
-          key={item.href}
+        <Link
+          key={item.title}
+          href={item.href}
           className={cn(
-            pathname === item.href
-              ? 'bg-muted hover:bg-muted cursor-pointer'
-              : 'hover:bg-muted cursor-pointer',
-            'flex flex-row items-center p-2 rounded'
+            buttonVariants({ variant: 'ghost' }),
+            'flex justify-start gap-4 h-12'
           )}
         >
-          {iconMappings[item.href]}
-          <Link
-            href={item.href}
-            className={cn(
-              buttonVariants({ variant: 'ghost' }),
-              'justify-start'
-            )}
-          >
-            {item.title}
-          </Link>
-        </div>
+          {iconMappings[item.href]} {item.title}
+        </Link>
       ))}
     </nav>
   );
