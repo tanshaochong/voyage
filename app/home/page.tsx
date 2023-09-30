@@ -32,27 +32,26 @@ import { cn } from '@/lib/utils';
 
 export default function HomePage() {
   return (
-    <div className="container grid grid-cols-2 justify-center w-full h-full box-border gap-4 py-8">
-      <div className="justify-center items-center w-full flex flex-col grow">
-        <Card className="p-6 h-full w-full flex flex-col justify-center items-center">
-          <Avatar className="w-24 h-24">
-            <AvatarImage />
-            <AvatarFallback>LG</AvatarFallback>
-          </Avatar>
-          <div className="mt-5 mb-1 text-2xl font-semibold">Lalit Goel</div>
-          <small className="text-base font-light leading-none mb-10">
-            Staff Engineer
-          </small>
+    <div className="container grid grid-cols-2 justify-center w-full h-full box-border gap-4 py-4">
+      <div className="w-full flex flex-col grow">
+        <Card className="p-6 h-full w-full flex flex-col gap-2 items-center">
+          <div>
+            <Avatar className="w-24 h-24 mb-4">
+              <AvatarImage />
+              <AvatarFallback>LG</AvatarFallback>
+            </Avatar>
+            <div className="text-2xl font-semibold">Lalit Goel</div>
+            <small className="text-sm text-muted-foreground leading-none">
+              Staff Engineer
+            </small>
+          </div>
           <ProfileInfo />
-          <Alert className="">
+          <Alert>
             <AlertTitle>New courses available!</AlertTitle>
             <AlertDescription>
               Check out new courses to boost your performance.
             </AlertDescription>
           </Alert>
-          <div className="w-full h-full gap-5 flex justify-center mt-5">
-            <Button>Logout</Button>
-          </div>
         </Card>
       </div>
       <div className="w-full h-full flex flex-col">
@@ -94,7 +93,7 @@ export function FeedbackFormDialog() {
       <AlertDialogTrigger asChild>
         <Button variant="outline">
           <MessageSquareIcon className="h-5 mr-3" />
-          Send Feedback
+          Send feedback
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>
