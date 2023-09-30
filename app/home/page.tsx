@@ -2,6 +2,7 @@ import { ArrowRight, MessageSquareIcon } from 'lucide-react';
 import Link from 'next/link';
 
 import { FeedbackForm, Goals, ProfileInfo, Progress } from '@/components/home/';
+import { FeedbackFormDialog } from '@/components/home/FeedbackFormDialog';
 import {
   AlertDialog,
   AlertDialogContent,
@@ -96,21 +97,5 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-  );
-}
-
-export function FeedbackFormDialog() {
-  return (
-    <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button variant="outline">
-          <MessageSquareIcon className="h-5 mr-3" />
-          Send feedback
-        </Button>
-      </AlertDialogTrigger>
-      <AlertDialogContent>
-        <FeedbackForm />
-      </AlertDialogContent>
-    </AlertDialog>
   );
 }

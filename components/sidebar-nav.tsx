@@ -38,7 +38,8 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
           href={item.href}
           className={cn(
             buttonVariants({ variant: 'ghost' }),
-            'flex justify-start gap-4 h-12'
+            'flex justify-start gap-4 h-12',
+            pathname === item.href ? 'bg-muted' : ''
           )}
         >
           {iconMappings[item.href]} {item.title}
