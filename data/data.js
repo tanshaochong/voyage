@@ -5,7 +5,7 @@ export const FIREBASE_USER = {
     photoURL: ""
 }
 
-const RAW_FEEDBACK = [
+export const RAW_FEEDBACK = [
     "I wanted to acknowledge John's exceptional leadership on our recent project. His clear vision, proactive decision-making, and ability to keep the team motivated were instrumental in our project's success. His dedication to our goals is truly commendable.",
     "John's communication skills have been a game-changer for our team. His regular project updates and open-door policy have created a transparent and collaborative atmosphere. It's much easier for us to stay on track and address any issues thanks to his effective communication.",
     "I was impressed by John's ability to adapt to unexpected challenges during the project. He remained calm under pressure and quickly adjusted our strategy to ensure we met our deadlines. His flexibility and problem-solving skills are a valuable asset to our team.",
