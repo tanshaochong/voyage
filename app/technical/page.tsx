@@ -1,5 +1,6 @@
 import SkillSection from '@/components/techskill/technical-skill-section';
 import courseData from '@/data/courses.json';
+import { FIREBASE_USER } from '@/data/data';
 
 export type Course = {
   id: string;
@@ -21,9 +22,11 @@ export type Categories = {
 
 export default function TechnicalSkillPage() {
   return (
-    <div className="flex flex-col justify-center">
-      <h1 className="mt-10 text-2xl font-medium text-center mb-10">
-        Empowering Your Career. Curated For you.
+    <div className="container py-4">
+      <h1 className="text-3xl font-semibold text-left mr-auto mb-8">
+        Hi {FIREBASE_USER.displayName.split(' ')[0]},
+        <br />
+        Let&apos;s empower your career with these curated courses
       </h1>
       <div className="flex flex-col items-center">
         {courseData.mainCategory.map((categories, idx) => (
