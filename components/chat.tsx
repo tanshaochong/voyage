@@ -1,6 +1,7 @@
 'use client';
 
 import { useChat } from 'ai/react';
+import { RefObject } from 'react';
 
 import {
   Card,
@@ -10,9 +11,14 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { toast } from '@/components/ui/use-toast';
 import { cn } from '@/lib/utils';
 
-export default function Chat() {
+export default function Chat({
+  chatRef,
+}: {
+  chatRef: RefObject<HTMLDivElement>;
+}) {
   const {
     messages,
     input,
@@ -31,13 +37,29 @@ export default function Chat() {
           "You are a helpful career coach. Answer the users' questions, limiting your responses to 4 sentences.",
       },
     ],
+    onResponse: () => {
+      if (chatRef && chatRef.current) {
+        chatRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+    onFinish: () => {
+      if (chatRef && chatRef.current) {
+        chatRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+    onError: () => {
+      toast({
+        title: 'An error occured.',
+        description: 'Please refresh the page.',
+      });
+    },
   });
 
   return (
     <Card className="border-dashed border-2 flex flex-col overflow-hidden ">
       <div className="flex flex-col grow overflow-auto">
         <CardHeader>
-          <CardTitle>Learn more</CardTitle>
+          <CardTitle>Learn more about how to develop these skills</CardTitle>
         </CardHeader>
         <CardContent className="">
           {messages.slice(1).map((m, index) => (
@@ -53,6 +75,7 @@ export default function Chat() {
             </p>
           ))}
         </CardContent>
+        <span ref={chatRef}></span>
       </div>
       <CardFooter className="">
         <form onSubmit={handleSubmit} className="w-full">

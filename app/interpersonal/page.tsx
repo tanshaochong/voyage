@@ -2,7 +2,7 @@
 
 import { ChatRequest, FunctionCallHandler, nanoid } from 'ai';
 import { useChat, useCompletion } from 'ai/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Chat from '@/components/chat';
 import { Button } from '@/components/ui/button';
@@ -16,6 +16,7 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Skeleton } from '@/components/ui/skeleton';
+import { toast } from '@/components/ui/use-toast';
 import { RAW_FEEDBACK } from '@/data/data';
 import { cn } from '@/lib/utils';
 
@@ -43,6 +44,12 @@ const InterpersonalPage = () => {
           "You are a helpful career coach. Answer the users' questions, limiting your responses to 4 sentences.",
       },
     ],
+    onError: () => {
+      toast({
+        title: 'An error occured.',
+        description: 'Please refresh the page.',
+      });
+    },
   });
   const [feedback, setFeedback] = useState({
     positive1: '',
@@ -66,6 +73,8 @@ const InterpersonalPage = () => {
     }
   };
 
+  const chatRef = useRef<HTMLDivElement>(null);
+
   const {
     setMessages,
     messages: summaryMessages,
@@ -75,6 +84,24 @@ const InterpersonalPage = () => {
     experimental_onFunctionCall: functionCallHandler,
     api: '/api/completion',
     id: 'summarisedetails',
+    onResponse: () => {
+      if (chatRef && chatRef.current) {
+        chatRef.current.scrollIntoView({ behavior: 'smooth' });
+        console.log('hey');
+      }
+    },
+    onFinish: () => {
+      if (chatRef && chatRef.current) {
+        chatRef.current.scrollIntoView({ behavior: 'smooth' });
+        console.log('hey');
+      }
+    },
+    onError: () => {
+      toast({
+        title: 'An error occured.',
+        description: 'Please refresh the page.',
+      });
+    },
   });
 
   useEffect(() => {
@@ -94,7 +121,7 @@ const InterpersonalPage = () => {
   };
 
   return (
-    <div className="w-full h-full max-h-full flex flex-col gap-2">
+    <div className="w-full h-[calc(100vh-2rem)] flex flex-col gap-2">
       <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Strengths & Areas for Improvement
       </h2>
@@ -137,7 +164,7 @@ const InterpersonalPage = () => {
               );
             })}
         </div>
-        <Chat />
+        <Chat chatRef={chatRef} />
       </div>
     </div>
   );
