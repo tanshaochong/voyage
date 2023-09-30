@@ -1,0 +1,667 @@
+{
+  "mainCategory": [
+    {
+      "name": "Leadership",
+      "courses": [
+        {
+          "id": "01001",
+          "title": "Managing a Team",
+          "company": "PSA",
+          "coursetype": "Workshop",
+          "imgurl": "https://picsum.photos/seed/01001/300/200",
+          "skills": [
+            "Communication",
+            "Teamwork",
+            "Leadership",
+            "Problem-solving"
+          ]
+        },
+        {
+          "id": "01002",
+          "title": "Effective Leadership Strategies",
+          "company": "Leadership Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/01002/300/200",
+          "skills": [
+            "Leadership Development",
+            "Strategic Thinking",
+            "Team Management",
+            "Conflict Resolution",
+            "Decision-making"
+          ]
+        },
+        {
+          "id": "01003",
+          "title": "Leadership Communication",
+          "company": "Leadership Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/01003/300/200",
+          "skills": [
+            "Effective Communication",
+            "Interpersonal Skills",
+            "Public Speaking",
+            "Influencing Others"
+          ]
+        },
+        {
+          "id": "01004",
+          "title": "Leadership and Decision-Making",
+          "company": "Leadership Academy",
+          "coursetype": "Workshop",
+          "imgurl": "https://picsum.photos/seed/01004/300/200",
+          "skills": [
+            "Ethical Decision-Making",
+            "Critical Thinking",
+            "Problem Analysis",
+            "Risk Management"
+          ]
+        },
+        {
+          "id": "01005",
+          "title": "Team Leadership and Collaboration",
+          "company": "Leadership Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/01005/300/200",
+          "skills": [
+            "Team Building",
+            "Collaborative Problem-Solving",
+            "Conflict Management",
+            "Effective Team Leadership"
+          ]
+        },
+        {
+          "id": "01006",
+          "title": "Leadership Ethics",
+          "company": "Leadership Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/01006/300/200",
+          "skills": [
+            "Ethical Leadership",
+            "Values-Based Decision-Making",
+            "Social Responsibility"
+          ]
+        },
+        {
+          "id": "01007",
+          "title": "Leadership and Innovation",
+          "company": "Innovative Leadership Institute",
+          "coursetype": "Workshop",
+          "imgurl": "https://picsum.photos/seed/01007/300/200",
+          "skills": [
+            "Innovative Leadership",
+            "Creativity",
+            "Change Management",
+            "Adaptability"
+          ]
+        },
+        {
+          "id": "01008",
+          "title": "Strategic Leadership",
+          "company": "Strategic Leadership Solutions",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/01008/300/200",
+          "skills": [
+            "Strategic Planning",
+            "Organizational Leadership",
+            "Visionary Leadership",
+            "Strategic Decision-Making"
+          ]
+        },
+        {
+          "id": "01009",
+          "title": "Leadership and Diversity",
+          "company": "Diversity Leadership Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/01009/300/200",
+          "skills": [
+            "Inclusive Leadership",
+            "Diversity Management",
+            "Cultural Competence"
+          ]
+        },
+        {
+          "id": "01010",
+          "title": "Leadership in Times of Crisis",
+          "company": "PSA",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/01010/300/200",
+          "skills": [
+            "Crisis Leadership",
+            "Resilience",
+            "Adaptive Leadership",
+            "Decision-Making"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Port Operations and Management",
+      "courses": [
+        {
+          "id": "02001",
+          "title": "Port and Terminal Operations",
+          "company": "Maritime Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/02001/300/200",
+          "skills": [
+            "Port Operations",
+            "Terminal Management",
+            "Cargo Handling",
+            "Container Handling"
+          ]
+        },
+        {
+          "id": "02002",
+          "title": "Container Handling and Stowage",
+          "company": "Port Logistics Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/02002/300/200",
+          "skills": [
+            "Container Operations",
+            "Stowage Techniques",
+            "Port Equipment",
+            "Safety Procedures"
+          ]
+        },
+        {
+          "id": "02003",
+          "title": "Cargo Handling and Logistics",
+          "company": "Logistics Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/02003/300/200",
+          "skills": [
+            "Cargo Management",
+            "Logistics Planning",
+            "Supply Chain",
+            "Warehousing"
+          ]
+        },
+        {
+          "id": "02004",
+          "title": "Berth and Vessel Operations",
+          "company": "Maritime Operations Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/02004/300/200",
+          "skills": [
+            "Berth Management",
+            "Vessel Operations",
+            "Port Navigation",
+            "Safety Protocols"
+          ]
+        },
+        {
+          "id": "02005",
+          "title": "Terminal Safety and Security",
+          "company": "Port Safety Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/02005/300/200",
+          "skills": [
+            "Safety Procedures",
+            "Security Protocols",
+            "Emergency Response",
+            "Risk Assessment"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Maritime and Shipping Knowledge",
+      "courses": [
+        {
+          "id": "03001",
+          "title": "Maritime Regulations and Compliance",
+          "company": "Maritime Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/03001/300/200",
+          "skills": [
+            "Maritime Regulations",
+            "Compliance Standards",
+            "Regulatory Frameworks",
+            "Safety and Security"
+          ]
+        },
+        {
+          "id": "03002",
+          "title": "International Shipping Standards (e.g., SOLAS, MARPOL)",
+          "company": "Shipping Standards Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/03002/300/200",
+          "skills": [
+            "SOLAS Compliance",
+            "MARPOL Regulations",
+            "Global Shipping Standards",
+            "Environmental Compliance"
+          ]
+        },
+        {
+          "id": "03003",
+          "title": "Port State Control",
+          "company": "Port Control Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/03003/300/200",
+          "skills": [
+            "Port Inspections",
+            "Vessel Compliance",
+            "Regulatory Audits",
+            "Safety Inspections"
+          ]
+        },
+        {
+          "id": "03004",
+          "title": "Shipping Documentation (e.g., Bill of Lading)",
+          "company": "Shipping Documentation Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/03004/300/200",
+          "skills": [
+            "Bill of Lading",
+            "Documentation Procedures",
+            "Cargo Manifests",
+            "Legal Documentation"
+          ]
+        },
+        {
+          "id": "03005",
+          "title": "Maritime Law and Maritime Dispute Resolution",
+          "company": "Maritime Law Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/03005/300/200",
+          "skills": [
+            "Maritime Legal Framework",
+            "Dispute Resolution",
+            "Contract Law",
+            "Arbitration"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Safety and Emergency Response",
+      "courses": [
+        {
+          "id": "04001",
+          "title": "Occupational Health and Safety (OHS)",
+          "company": "Safety Training Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/04001/300/200",
+          "skills": [
+            "Workplace Safety",
+            "Risk Assessment",
+            "Safety Regulations",
+            "Hazard Identification"
+          ]
+        },
+        {
+          "id": "04002",
+          "title": "Emergency Response and Crisis Management",
+          "company": "Emergency Management Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/04002/300/200",
+          "skills": [
+            "Crisis Response Planning",
+            "Incident Command",
+            "Disaster Recovery",
+            "Communication Strategies"
+          ]
+        },
+        {
+          "id": "04003",
+          "title": "Hazardous Materials Handling",
+          "company": "Safety and Hazmat Training",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/04003/300/200",
+          "skills": [
+            "Chemical Handling",
+            "Safety Protocols",
+            "Material Classification",
+            "Emergency Procedures"
+          ]
+        },
+        {
+          "id": "04004",
+          "title": "First Aid and CPR Training",
+          "company": "First Aid Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/04004/300/200",
+          "skills": [
+            "Basic First Aid",
+            "Cardiopulmonary Resuscitation (CPR)",
+            "Life-Saving Techniques",
+            "Emergency Response Skills"
+          ]
+        },
+        {
+          "id": "04005",
+          "title": "Firefighting and Fire Safety",
+          "company": "Fire Safety Training Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/04005/300/200",
+          "skills": [
+            "Fire Prevention",
+            "Firefighting Techniques",
+            "Fire Safety Regulations",
+            "Evacuation Procedures"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Technical and Equipment Skills",
+      "courses": [
+        {
+          "id": "05001",
+          "title": "Operation of Port Machinery (e.g., Cranes, Forklifts)",
+          "company": "Port Machinery Training Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/05001/300/200",
+          "skills": [
+            "Cranes Operation",
+            "Forklift Operation",
+            "Heavy Machinery Handling",
+            "Safety Protocols"
+          ]
+        },
+        {
+          "id": "05002",
+          "title": "Equipment Maintenance and Troubleshooting",
+          "company": "Equipment Maintenance Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/05002/300/200",
+          "skills": [
+            "Equipment Maintenance",
+            "Troubleshooting Techniques",
+            "Preventive Maintenance",
+            "Repair Skills"
+          ]
+        },
+        {
+          "id": "05003",
+          "title": "Terminal Operating Systems (e.g., TOS)",
+          "company": "Terminal Systems Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/05003/300/200",
+          "skills": [
+            "Terminal Operating Systems",
+            "Software Navigation",
+            "Data Management",
+            "System Integration"
+          ]
+        },
+        {
+          "id": "05004",
+          "title": "RFID and Container Tracking Systems",
+          "company": "RFID Technology Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/05004/300/200",
+          "skills": [
+            "RFID Technology",
+            "Container Tracking",
+            "Data Collection",
+            "Inventory Management"
+          ]
+        },
+        {
+          "id": "05005",
+          "title": "Terminal Automation",
+          "company": "Automation Solutions Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/05005/300/200",
+          "skills": [
+            "Terminal Automation Systems",
+            "Process Optimization",
+            "Automation Technologies",
+            "Workflow Efficiency"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Environmental Awareness",
+      "courses": [
+        {
+          "id": "06001",
+          "title": "Environmental Regulations in Maritime Industry",
+          "company": "Environmental Compliance Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/06001/300/200",
+          "skills": [
+            "Maritime Environmental Regulations",
+            "Compliance Standards",
+            "Environmental Impact Assessment",
+            "Regulatory Compliance"
+          ]
+        },
+        {
+          "id": "06002",
+          "title": "Sustainability and Green Port Initiatives",
+          "company": "Sustainable Port Solutions",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/06002/300/200",
+          "skills": [
+            "Sustainability Principles",
+            "Green Port Initiatives",
+            "Environmental Conservation",
+            "Sustainable Practices"
+          ]
+        },
+        {
+          "id": "06003",
+          "title": "Pollution Prevention and Control",
+          "company": "Environmental Protection Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/06003/300/200",
+          "skills": [
+            "Pollution Control Strategies",
+            "Waste Management",
+            "Environmental Monitoring",
+            "Clean Technologies"
+          ]
+        },
+        {
+          "id": "06004",
+          "title": "Energy Efficiency in Port Operations",
+          "company": "Energy Efficiency Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/06004/300/200",
+          "skills": [
+            "Energy Efficiency Practices",
+            "Renewable Energy Integration",
+            "Energy Conservation",
+            "Efficient Operations"
+          ]
+        },
+        {
+          "id": "06005",
+          "title": "Emissions Reduction Strategies",
+          "company": "Emissions Reduction Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/06005/300/200",
+          "skills": [
+            "Emissions Reduction Techniques",
+            "Air Quality Improvement",
+            "Carbon Footprint Reduction",
+            "Environmental Impact Mitigation"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Communication and Interpersonal Skills",
+      "courses": [
+        {
+          "id": "07001",
+          "title": "Effective Communication",
+          "company": "Communication Excellence Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/07001/300/200",
+          "skills": [
+            "Clear Communication",
+            "Active Listening",
+            "Effective Presentation",
+            "Feedback and Listening"
+          ]
+        },
+        {
+          "id": "07002",
+          "title": "Conflict Resolution",
+          "company": "Conflict Management Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/07002/300/200",
+          "skills": [
+            "Conflict Identification",
+            "Negotiation Techniques",
+            "Mediation Skills",
+            "Conflict Resolution Strategies"
+          ]
+        },
+        {
+          "id": "07003",
+          "title": "Customer Service",
+          "company": "Customer Experience Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/07003/300/200",
+          "skills": [
+            "Customer Relationship Management",
+            "Effective Problem Solving",
+            "Service Excellence",
+            "Customer Satisfaction"
+          ]
+        },
+        {
+          "id": "07004",
+          "title": "Multilingual Communication (given the diverse workforce)",
+          "company": "Language and Culture Integration Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/07004/300/200",
+          "skills": [
+            "Multilingual Communication",
+            "Cultural Sensitivity",
+            "Language Skills",
+            "Cross-Cultural Communication"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Technology and Digital Skills",
+      "courses": [
+        {
+          "id": "08001",
+          "title": "Data Analytics for Port Operations",
+          "company": "Data Analytics Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/08001/300/200",
+          "skills": [
+            "Data Analysis",
+            "Data Visualization",
+            "Predictive Analytics",
+            "Operational Insights"
+          ]
+        },
+        {
+          "id": "08002",
+          "title": "Internet of Things (IoT) in Port Management",
+          "company": "IoT Port Solutions",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/08002/300/200",
+          "skills": [
+            "IoT Technologies",
+            "Sensors and Connectivity",
+            "Data Integration",
+            "Remote Monitoring"
+          ]
+        },
+        {
+          "id": "08003",
+          "title": "Cybersecurity in Maritime Industry",
+          "company": "Maritime Cybersecurity Center",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/08003/300/200",
+          "skills": [
+            "Cybersecurity Fundamentals",
+            "Maritime Threats",
+            "Incident Response",
+            "Security Best Practices"
+          ]
+        },
+        {
+          "id": "08004",
+          "title": "GIS (Geographic Information System) for Port Planning",
+          "company": "GIS Solutions Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/08004/300/200",
+          "skills": [
+            "GIS Fundamentals",
+            "Spatial Analysis",
+            "Data Mapping",
+            "Geospatial Planning"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Programming for Software Developers",
+      "courses": [
+        {
+          "id": "09001",
+          "title": "Introduction to Programming with Python",
+          "company": "Code Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/09001/300/200",
+          "skills": [
+            "Python Programming",
+            "Algorithmic Thinking",
+            "Debugging",
+            "Problem Solving"
+          ]
+        },
+        {
+          "id": "09002",
+          "title": "Web Development Fundamentals",
+          "company": "WebDev Institute",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/09002/300/200",
+          "skills": ["HTML", "CSS", "JavaScript", "Front-End Development"]
+        },
+        {
+          "id": "09003",
+          "title": "Database Design and SQL Programming",
+          "company": "Database Academy",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/09003/300/200",
+          "skills": [
+            "Database Design",
+            "SQL Programming",
+            "Data Modeling",
+            "Query Optimization"
+          ]
+        },
+        {
+          "id": "09004",
+          "title": "Object-Oriented Programming in Java",
+          "company": "Java Programming School",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/09004/300/200",
+          "skills": [
+            "Java Programming",
+            "OOP Concepts",
+            "Software Design",
+            "Java Development"
+          ]
+        },
+        {
+          "id": "09005",
+          "title": "Full-Stack Web Development with React and Node.js",
+          "company": "WebDev Pro",
+          "coursetype": "Online Course",
+          "imgurl": "https://picsum.photos/seed/09005/300/200",
+          "skills": [
+            "React.js",
+            "Node.js",
+            "Back-End Development",
+            "API Development"
+          ]
+        }
+      ]
+    }
+  ]
+}
