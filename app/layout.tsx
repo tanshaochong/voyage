@@ -54,7 +54,7 @@ export default function RootLayout({
                 alt="logo"
                 height={51}
                 width={128}
-                className="mx-auto"
+                className="mx-auto mb-4"
               />
             </Link>
             <SidebarNav items={sidebarNavItems} className="py-4" />

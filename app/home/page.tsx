@@ -36,8 +36,8 @@ export default function HomePage() {
         <br />
         Welcome to your voyage
       </h1>
-      <div className="grid grid-cols-2 justify-center w-full h-full box-border gap-4">
-        <div className="w-full flex flex-col grow">
+      <div className="grid grid-cols-5 justify-center w-full h-full box-border gap-4">
+        <div className="w-full flex flex-col grow col-span-2">
           <Card className="p-6 h-full w-full flex flex-col gap-2 items-center">
             <div>
               <Avatar className="w-24 h-24 mb-4">
@@ -63,8 +63,21 @@ export default function HomePage() {
             <Goals />
           </Card>
         </div>
-        <div className="w-full flex flex-col grow">
-          <Card className="w-full flex flex-col grow mb-5">
+        <div className="w-full flex flex-col grow col-span-3">
+          <Card className="w-full mb-5">
+            <CardHeader>
+              <CardTitle>Give feedback, to anyone</CardTitle>
+              <CardDescription className="text-justify">
+                Provide anonymous feedback about your team and managers. Our
+                smart career coach will compile the responses and share with
+                them insights on what others think of them.
+              </CardDescription>
+            </CardHeader>
+            <CardFooter className="justify-end">
+              <FeedbackFormDialog />
+            </CardFooter>
+          </Card>
+          <Card className="w-full flex flex-col grow">
             <CardHeader>
               <CardTitle>Track your progress</CardTitle>
               <CardDescription>Your PSA journey, at a glance</CardDescription>
@@ -83,15 +96,6 @@ export default function HomePage() {
                 <ArrowRight className="h-5 mr-3" />
                 Find out more
               </Link>
-            </CardFooter>
-          </Card>
-          <Card className="w-full">
-            <CardHeader>
-              <CardTitle>Give feedback, to anyone</CardTitle>
-              <CardDescription>Give feedback to your peers</CardDescription>
-            </CardHeader>
-            <CardFooter className="justify-end align-bottom h-fit pr-5">
-              <FeedbackFormDialog />
             </CardFooter>
           </Card>
         </div>
