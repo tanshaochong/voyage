@@ -10,7 +10,7 @@ const OverviewPage = () => {
         <br />
         Let&apos;s accelerate your career
       </h1>
-      <div className="grow grid grid-cols-2 gap-4 w-full">
+      <div className="grow grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
         <TechnicalOverview />
         <InterpersonalOverview />
       </div>

@@ -36,8 +36,8 @@ export default function HomePage() {
         <br />
         Welcome to your voyage
       </h1>
-      <div className="grid grid-cols-5 justify-center w-full h-full box-border gap-4">
-        <div className="w-full flex flex-col grow col-span-2">
+      <div className="grid grid-cols-1 lg:grid-cols-5 justify-center w-full h-full box-border gap-4">
+        <div className="w-full flex flex-col grow lg:col-span-2">
           <Card className="p-6 h-full w-full flex flex-col gap-2 items-center">
             <div>
               <Avatar className="w-24 h-24 mb-4">
@@ -63,7 +63,7 @@ export default function HomePage() {
             <Goals />
           </Card>
         </div>
-        <div className="w-full flex flex-col grow col-span-3">
+        <div className="w-full flex flex-col grow lg:col-span-3">
           <Card className="w-full mb-5">
             <CardHeader>
               <CardTitle>Give feedback, to anyone</CardTitle>

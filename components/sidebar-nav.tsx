@@ -10,9 +10,7 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { buttonVariants } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
@@ -36,7 +34,7 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
   return (
     <nav
       className={cn(
-        'flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1',
+        'flex space-x-2 flex-wrap lg:flex-col lg:space-x-0 lg:space-y-1',
         className
       )}
       {...props}
@@ -47,23 +45,13 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
           href={item.href}
           className={cn(
             buttonVariants({ variant: 'ghost' }),
-            'flex justify-start gap-4 h-12',
+            'flex justify-start gap-4 lg:h-12',
             pathname === item.href ? 'bg-muted' : ''
           )}
         >
           {iconMappings[item.href]} {item.title}
         </Link>
       ))}
-      <Alert className="bg-blue-50 border-none">
-        <AlertTitle className="text-slate-700">Demo Only</AlertTitle>
-        <AlertDescription className="text-slate-700">
-          Click
-          <Link href="/demo" className={'underline'}>
-            &nbsp;here&nbsp;
-          </Link>
-          to see the raw data that we pass into our AI models.
-        </AlertDescription>
-      </Alert>
     </nav>
   );
 }

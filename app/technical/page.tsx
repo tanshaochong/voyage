@@ -1,8 +1,12 @@
+import Link from 'next/link';
+
 import PersonaliseSection from '@/components/techskill/personalised-section';
 import SkillGapAnalysis from '@/components/techskill/skill-gap-analysis';
+import { buttonVariants } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { FIREBASE_USER } from '@/data/data';
 import recommendData from '@/data/recommended.json';
+import { cn } from '@/lib/utils';
 
 export type Course = {
   id: string;
@@ -45,6 +49,15 @@ export default function TechnicalSkillPage() {
         </span>
       </p>
       <PersonaliseSection recommendedCourses={recommendData.courses} />
+      <Link
+        href={'/learn'}
+        className={cn(
+          buttonVariants({ variant: 'default' }),
+          'mt-8 self-center'
+        )}
+      >
+        View more courses
+      </Link>
     </div>
   );
 }
