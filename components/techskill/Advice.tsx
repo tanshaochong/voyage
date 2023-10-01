@@ -23,6 +23,18 @@ const Advice = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const addLineBreaks = (str: string): string[] => {
+    const arr = str.split('.');
+    const res = [];
+    for (let i = 0; i < arr.length; i += 3) {
+      let s = arr[i];
+      arr[i + 1] ? (s += arr[i + 1] + '. ') : null;
+      arr[i + 2] ? (s += arr[i + 2] + '. ') : null;
+      res.push(s);
+    }
+    return res;
+  };
+
   return (
     <div>
       {isLoading ? (
@@ -33,7 +45,18 @@ const Advice = () => {
           <Skeleton className="h-4" />
         </div>
       ) : (
-        <p>{completion}</p>
+        <p>
+          {completion &&
+            addLineBreaks(completion).map((para, idx) => {
+              return (
+                <span key={idx}>
+                  <span>{para}</span>
+                  <br />
+                  <br />
+                </span>
+              );
+            })}
+        </p>
       )}
     </div>
   );

@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex flex-col space-y-8 lg:flex-row lg:space-y-0 min-h-screen max-h-screen">
-          <aside className="flex z-10 flex-wrap w-screen lg:flex-col lg:pb-4 lg:pt-8 lg:h-[calc(100vh-1rem)] bg-white lg:w-1/6 px-2 border-r-gray-200 border-2 rounded-lg lg:ml-4 lg:my-2 fixed">
+          <aside className="flex z-10 justify-center flex-wrap w-screen lg:flex-col lg:pb-4 lg:pt-8 lg:h-[calc(100vh-1rem)] bg-white lg:w-1/6 px-2 border-r-gray-200 border-2 rounded-lg lg:ml-4 lg:my-2 fixed">
             <div className="hidden lg:block">
               <Link href="/home">
                 <Image
