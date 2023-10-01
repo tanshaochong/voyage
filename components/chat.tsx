@@ -34,7 +34,7 @@ export default function Chat({
         id: 'system prompt',
         role: 'system',
         content:
-          "You are a helpful career coach. Answer the users' questions, limiting your responses to 4 sentences.",
+          "I want you to act as a helpful career coach who gives concrete advice on career development. The user is curious about the topic of interpersonal skills, and wishes to learn more about how he can build on his strengths and work on his areas for improvements. Answer the users' questions relating to interpersonal skills, limiting your responses to 4 sentences.",
       },
     ],
     onResponse: () => {

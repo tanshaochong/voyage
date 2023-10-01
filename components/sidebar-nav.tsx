@@ -10,7 +10,9 @@ import {
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { buttonVariants } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
@@ -52,6 +54,16 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
           {iconMappings[item.href]} {item.title}
         </Link>
       ))}
+      <Alert className="bg-blue-50 border-none">
+        <AlertTitle className="text-slate-700">Demo Only</AlertTitle>
+        <AlertDescription className="text-slate-700">
+          Click
+          <Link href="/demo" className={'underline'}>
+            &nbsp;here&nbsp;
+          </Link>
+          to see the raw data that we pass into our AI models.
+        </AlertDescription>
+      </Alert>
     </nav>
   );
 }

@@ -20,8 +20,10 @@ export async function POST(req: Request) {
     stream: true,
     temperature: 0.6,
     max_tokens: 500,
-    prompt: `The user's current skill levels are rated out of a 100. He is currently a Senior Staff Engineer at working at PSA, and posseses these skills. You are an intelligent career coach who gives concrete advice on career development. What skills should he work on in order to progress to the role of Staff Engineer? Go into detail about the current trends in the industry. You MUST speak in the first person perspective, refer to the user as 'You'.
-    ${JSON.stringify(USER.skills)}
+    prompt: `I want you to act as a helpful career coach who gives concrete advice on career development. A user has come to you to seek advice on how to improve his technical skills to better suit his current role and facilitate his career progression. The user is currently a Senior Engineer working at PSA. What skills should he work on in order to progress to the role of Staff Engineer? Go into detail about the current trends in the industry. You MUST speak in the first person perspective, refer to the user as 'You'.
+    Here are the user's skills given in a JSON format: ${JSON.stringify(
+      USER.skills
+    )}. The user's current skill levels are rated out of a 100.
     `,
   });
   // Convert the response into a friendly text-stream

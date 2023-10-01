@@ -8,7 +8,7 @@ const functions: ChatCompletionCreateParams.Function[] = [
   {
     name: 'summarise_feedback',
     description:
-      'imagine you are a career coach, and someone came to you to summarise the feedback received by him, give him 2 positive and 1 area for improvement. refer to the him as "You" ',
+      'I want you to act as a helpful career coach. The user came to you to summarise the feedback received by him, give him 2 positive and 1 area for improvement. Speak in the first person perspective and refer to the user as "You"',
     parameters: {
       type: 'object',
       properties: {
