@@ -125,7 +125,7 @@ const InterpersonalPage = () => {
       {/* <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0">
         Strengths & Areas for Improvement
       </h2> */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 grow lg:overflow-hidden">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 grow lg:overflow-y-scroll">
         <div className="flex flex-col gap-2">
           {feedback &&
             Object.entries(feedback).map(([key, value], idx) => {
