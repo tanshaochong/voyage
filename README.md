@@ -1,4 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+> Click [here](psa-voyage.vercel.app) for the live demo
+
+# Voyage
+
+Empowering employees in their dream-chasing voyage.
+
+## Overview
+
+Voyage is a platform that empowers PSA to ahieve its sustainability goal of nurturing a future-ready workforce through the use of data and artificial intelligence.
+
+It facilitates the following functions among its employees
+
+- Mutual feedback
+- Career roadmapping
+- Goal setting
+- Course matching
+- Smart career coach
 
 ## Getting Started
 
@@ -6,31 +22,74 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Demo Video
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[THUMBNAIL]
 
-## Learn More
+> Youtube Video Link: [YOUTUBE_VIDEO_LINK]
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div align="center">
+	<img height="60" src="https://github.com/get-icon/geticon/raw/master/icons/typescript-icon.svg" alt="Typescript" title="Typescript" />
+	<img height="60" src="https://github.com/get-icon/geticon/raw/master/icons/react.svg" alt="React" title="React" />
+ 	<img height="60" src="https://github.com/get-icon/geticon/raw/master/icons/nextjs-icon.svg" alt="Next.js" title="Next.js" />
+	<img height="58" src="https://github.com/get-icon/geticon/raw/master/icons/tailwindcss-icon.svg" alt="Tailwind.css" title="Tailwind.css" />
+	<img height="60" src="https://github.com/get-icon/geticon/raw/master/icons/firebase.svg" alt="Firebase" title="Firebase" />
+	<img height="60" src="https://assets.stickpng.com/images/63c52c2190250dd34bd6a9b0.png" alt="OpenAI" title="OpenAI" />
+</div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## UN Sustainable Development Goals And Targets
 
-## Deploy on Vercel
+### SDG 8: Decent Work and Economic Growth
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![sdg8](https://globalgoalscms.co.uk/wp-content/uploads/2021/10/8-goal-resources.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### SDG 9: Industry, Innocation and Infrastructure
+
+![sdg9](https://globalgoalscms.co.uk/wp-content/uploads/2021/10/9-goal-resources.png)
+
+## Core Functionalities
+
+### Mutual Feedback
+
+<img width="1230" alt="Mutual Feedback" src="">
+
+Employees can provide anonymous open-ended feedback to peers. Voyage’s AI model will then aggregate the feedback and share generated insights
+
+### Career Roadmapping
+
+<img width="1230" alt="Career Roadmapping" src="">
+
+Employees can discover their skill level and identify strengths and areas of improvement to accelerate their long-term career progression
+
+### Goal Setting
+
+<img width="1230" alt="Goal Setting" src="">
+
+Employees are encouraged to actively set short-term goals to progressively upskill themselves
+
+### Course Matching
+
+<img width="1230" alt="Course Matching" src="">
+
+Employees will be recommended a personalised curation of courses that caters to their current skill level
+
+### Smart Career Coach
+
+<img width="1230" alt="Smart Career Coach" src="">
+
+Employees will receive personalised qualitative feedback from Voyage’s AI career coach to develop non-technical skills
+
+---
+
+Developed by:
+
+- [Tan Shao Chong](https://github.com/ackselz)
+- [Lau Quan Feng Ryan](https://github.com/RyanLauQF)
+- [Xu Jialu](https://github.com/3nityR)
+- [Zhou Ziheng](https://github.com/zorridge)
