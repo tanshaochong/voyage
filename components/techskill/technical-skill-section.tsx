@@ -19,7 +19,7 @@ export default function SkillSection({
       : courseCategory.courses.slice(0, 3);
 
     return (
-      <div className="grid grid-cols-3 gap-y-5 gap-x-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-5 gap-x-10">
         {coursesToRender.map((course) => (
           <div key={course.id}>
             <CourseCard course={course} />

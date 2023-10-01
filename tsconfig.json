@@ -27,7 +27,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/firebase.ts"
+    "app/firebase.ts",
+    "components/techskill/personalised-course-card.jsx",
+    "components/techskill/personalised-section.jsx"
   ],
   "exclude": ["node_modules"]
 }

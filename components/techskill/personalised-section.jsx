@@ -14,8 +14,8 @@ import PersonaliseCard from '@/components/techskill/personalised-course-card';
 
 export default function PersonaliseSection({ recommendedCourses }) {
   return (
-    <section className="w-full projects" id="projects">
-      <div className="flex w-full projects__container">
+    <section className=" projects" id="projects">
+      <div className="flex projects__container">
         <button className="projects__swiper-prev bg-transparent">
           <ChevronLeft className="w-28" />
         </button>

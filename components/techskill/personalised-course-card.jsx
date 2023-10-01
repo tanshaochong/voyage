@@ -3,18 +3,18 @@ import { useState } from 'react';
 export default function PersonaliseCard({ course }) {
   const [visibleSkills] = useState(course.skills);
   return (
-    <div className="flex rounded-[20px] h-full items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-      <div className="ml-8 mr-4 my-5 h-full w-full">
+    <div className="grid grid-cols-1 xl:grid-cols-[1fr_2fr] h-full items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 ">
+      <div className="p-4 h-full w-full flex justify-center items-center">
         {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={course.imgurl}
             alt="filler"
-            className="h-full w-full rounded-xl 3xl:h-full 3xl:w-full"
+            className="h-full w-full rounded-xl max-h-48 max-w-48 object-fill"
           />
         }
       </div>
-      <div className="flex flex-col my-10 justify-between p-4 leading-normal">
+      <div className="flex flex-col xl:my-4 justify-between p-4 leading-normal">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {course.title}
         </h5>
