@@ -80,12 +80,12 @@ export default function RootLayout({
             <div className="hidden lg:block">
               <ProfileMenu />
             </div>
-            <Toaster />
           </aside>
           {/* <ScrollArea className="lg:h-screen w-5/6 p-4"> */}
           <div className="pt-32 w-screen lg:h-screen lg:w-5/6 lg:pt-4 lg:p-4 lg:ml-[calc(100vw/6+1rem)]">
             {children}
           </div>
+          <Toaster />
           {/* </ScrollArea> */}
         </div>
       </body>
