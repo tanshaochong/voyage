@@ -1,4 +1,5 @@
 import { ChevronRight } from 'lucide-react';
+import React from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -9,13 +10,18 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 
-const CourseCard = () => {
+interface CourseCardProps {
+  provider: string;
+  courseName: string;
+}
+
+const CourseCard: React.FC<CourseCardProps> = ({ provider, courseName }) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-lg">Udemy</CardTitle>
+        <CardTitle className="text-lg">{provider}</CardTitle>
         <CardDescription className="text-xs truncate">
-          Intro to Effective Communication
+          {courseName}
         </CardDescription>
       </CardHeader>
       {/* <CardContent>
