@@ -60,7 +60,7 @@ const InterpersonalOverview = () => {
     <Card className="flex flex-col">
       <CardHeader>
         <CardTitle>
-          Based on your feedbacks
+          Based on feedback for you
           <span className="ml-4 align-middle text-xs font-light text-muted-foreground">
             powered by {/* eslint-disable-next-line @next/next/no-img-element*/}
             <img
