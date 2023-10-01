@@ -36,6 +36,10 @@ const sidebarNavItems = [
     title: 'Interpersonal Skills',
     href: '/interpersonal',
   },
+  {
+    title: 'Learn',
+    href: '/learn',
+  },
 ];
 
 export default function RootLayout({

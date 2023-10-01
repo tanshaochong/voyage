@@ -22,9 +22,9 @@ export const Goals = () => {
       isComplete: boolean;
     }[]
   ) => {
-    return goals.map((goal) => {
+    return goals.map((goal, idx) => {
       return (
-        <Card key={goal.description} className="w-48">
+        <Card key={goal.description + idx} className="w-48">
           <CardHeader>
             <CardTitle className="text-sm">{goal.description}</CardTitle>
             <CardDescription className="text-xs">
