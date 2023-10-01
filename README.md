@@ -1,4 +1,4 @@
-> Click [here](psa-voyage.vercel.app) for the live demo
+> Click [here](https://psa-voyage.vercel.app/) for the live demo
 
 # Voyage
 
