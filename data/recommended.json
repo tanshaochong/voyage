@@ -1,61 +1,44 @@
 {
   "courses": [
     {
-      "id": "01001",
-      "title": "Managing a Team",
-      "description": "This comprehensive workshop focuses on effective team management and leadership strategies. Explore the intricacies of building and leading high-performing teams while enhancing your communication and problem-solving skills.",
-      "company": "PSA",
-      "coursetype": "Workshop",
-      "imgurl": "https://picsum.photos/seed/01001/300/260",
-      "skills": [
-        "Communication",
-        "Teamwork",
-        "Leadership",
-        "Problem-solving",
-        "Influencing Others"
-      ]
-    },
-    {
-      "id": "01002",
-      "title": "Effective Leadership Strategies",
-      "description": "Dive into the world of leadership development with this engaging online course. Discover the art of strategic thinking, effective team management, and conflict resolution techniques that will empower you to become an impactful leader.",
-      "company": "Leadership Institute",
+      "id": "09001",
+      "title": "Intro to Effective Communication",
+      "description": "Explore the fundamentals of effective communication in this comprehensive online course offered by Udemy. In this course, you'll delve deep into the art of communication, covering a wide range of topics such as verbal and non-verbal communication, active listening, effective presentation skills, and more.",
+      "company": "Udemy",
       "coursetype": "Online Course",
-      "imgurl": "https://picsum.photos/seed/01002/300/260",
-      "skills": [
-        "Leadership Development",
-        "Strategic Thinking",
-        "Team Management",
-        "Conflict Resolution"
-      ]
-    },
-    {
-      "id": "01003",
-      "title": "Leadership Communication",
-      "description": "Join our online course to master the art of leadership communication. Enhance your skills in effective communication, interpersonal relationships, public speaking, and influencing others, key attributes for successful leaders.",
-      "company": "PSA Learn",
-      "coursetype": "Online Course",
-      "imgurl": "https://picsum.photos/seed/01003/300/260",
+      "imgurl": "https://picsum.photos/seed/09001/300/260",
       "skills": [
         "Effective Communication",
         "Interpersonal Skills",
-        "Public Speaking",
-        "Influencing Others"
+        "Public Speaking"
       ]
     },
     {
-      "id": "01004",
-      "title": "Leadership and Decision-Making",
-      "description": "Participate in our interactive workshop on leadership and decision-making. Gain insights into ethical decision-making, critical thinking, problem analysis, and risk management, essential skills for making informed leadership choices.",
-      "company": "Leadership Academy",
+      "id": "09002",
+      "title": "Advanced Remote Crane Operations",
+      "description": "Join our advanced remote crane operations workshop conducted by PSA. This hands-on workshop is designed for individuals who seek to excel in the field of crane operations. Throughout the course, you'll gain expertise in operating and controlling cranes remotely, ensuring safety and efficiency.",
+      "company": "PSA",
       "coursetype": "Workshop",
-      "imgurl": "https://picsum.photos/seed/01004/300/260",
-      "skills": [
-        "Ethical Decision-Making",
-        "Critical Thinking",
-        "Problem Analysis",
-        "Risk Management"
-      ]
+      "imgurl": "https://picsum.photos/seed/09002/300/260",
+      "skills": ["Crane Operations", "Safety Protocols"]
+    },
+    {
+      "id": "09003",
+      "title": "Intro to Systems",
+      "description": "Discover the power of systems thinking in our online course 'Intro to Systems.' Offered by PSA, this course provides you with a foundational understanding of systems theory and its real-world applications. Through the course, you will also gain deeper insights into PSA's cutting-edge innovations",
+      "company": "PSA",
+      "coursetype": "Online Course",
+      "imgurl": "https://picsum.photos/seed/09003/300/260",
+      "skills": ["Systems Thinking", "Problem-solving"]
+    },
+    {
+      "id": "09004",
+      "title": "Leadership and Team Management",
+      "description": "Unlock your leadership potential with our comprehensive online course on 'Leadership and Team Management' from Udemy. This course is tailored to equip you with the essential skills and knowledge needed to become an effective leader. Topics covered include leadership styles, team dynamics, conflict resolution, and strategies.",
+      "company": "Udemy",
+      "coursetype": "Online Course",
+      "imgurl": "https://picsum.photos/seed/09004/300/260",
+      "skills": ["Leadership", "Team Management", "Conflict Resolution"]
     }
   ]
 }
