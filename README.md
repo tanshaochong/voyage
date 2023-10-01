@@ -26,12 +26,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Demo Video
-
-[THUMBNAIL]
-
-> Youtube Video Link: [YOUTUBE_VIDEO_LINK]
-
 ## Technologies
 
 <div align="center">
@@ -40,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
  	<img height="60" src="https://github.com/get-icon/geticon/raw/master/icons/nextjs-icon.svg" alt="Next.js" title="Next.js" />
 	<img height="58" src="https://github.com/get-icon/geticon/raw/master/icons/tailwindcss-icon.svg" alt="Tailwind.css" title="Tailwind.css" />
 	<img height="60" src="https://github.com/get-icon/geticon/raw/master/icons/firebase.svg" alt="Firebase" title="Firebase" />
-	<img height="60" src="https://assets.stickpng.com/images/63c52c2190250dd34bd6a9b0.png" alt="OpenAI" title="OpenAI" />
+	<img height="60" src="https://avatars.githubusercontent.com/u/14957082?s=200&v=4" alt="OpenAI" title="OpenAI" />
 </div>
 
 ## UN Sustainable Development Goals And Targets
@@ -57,31 +51,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Mutual Feedback
 
-<img width="1230" alt="Mutual Feedback" src="">
-
 Employees can provide anonymous open-ended feedback to peers. Voyage’s AI model will then aggregate the feedback and share generated insights
 
 ### Career Roadmapping
-
-<img width="1230" alt="Career Roadmapping" src="">
 
 Employees can discover their skill level and identify strengths and areas of improvement to accelerate their long-term career progression
 
 ### Goal Setting
 
-<img width="1230" alt="Goal Setting" src="">
-
 Employees are encouraged to actively set short-term goals to progressively upskill themselves
 
 ### Course Matching
 
-<img width="1230" alt="Course Matching" src="">
-
 Employees will be recommended a personalised curation of courses that caters to their current skill level
 
 ### Smart Career Coach
-
-<img width="1230" alt="Smart Career Coach" src="">
 
 Employees will receive personalised qualitative feedback from Voyage’s AI career coach to develop non-technical skills
 
