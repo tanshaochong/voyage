@@ -1,6 +1,12 @@
 'use client';
 
-import { Home, LayoutDashboard, Users2, Wrench } from 'lucide-react';
+import {
+  GraduationCap,
+  Home,
+  LayoutDashboard,
+  Users2,
+  Wrench,
+} from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -22,6 +28,7 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
     '/overview': <LayoutDashboard className="w-5 h-5" />,
     '/technical': <Wrench className="w-5 h-5" />,
     '/interpersonal': <Users2 className="w-5 h-5" />,
+    '/learn': <GraduationCap className="w-5 h-5" />,
   };
 
   return (

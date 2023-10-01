@@ -4,7 +4,7 @@ export const FIREBASE_USER = {
   email: 'johndoe@psa.sg',
   photoURL:
     'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2980&q=80',
-  currentPos: 'Staff Engineer',
+  currentPos: 'Senior Engineer',
 };
 
 export const RAW_FEEDBACK = [
@@ -17,7 +17,7 @@ export const RAW_FEEDBACK = [
 ];
 
 // required skills for each position
-const POSITION_TO_SKILL_LEVEL = {
+export const POSITION_TO_SKILL_LEVEL = {
   'Junior Engineer': {
     'Strategic Thinking': 50,
     Leadership: 50,
@@ -44,7 +44,7 @@ const POSITION_TO_SKILL_LEVEL = {
   },
 };
 
-const POSITION_PROGRESSION = [
+export const POSITION_PROGRESSION = [
   'Junior Engineer',
   'Senior Engineer',
   'Staff Engineer',
@@ -54,23 +54,16 @@ const POSITION_PROGRESSION = [
 export const USER = {
   uid: 0,
   // chronological order of positions
-  positions: [
-    {
-      title: 'Junior Engineer',
+  positions: {
+    'Junior Engineer': {
       start: 2016,
       end: 2017,
     },
-    {
-      title: 'Senior Engineer',
+    'Senior Engineer': {
       start: 2017,
-      end: 2022,
-    },
-    {
-      title: 'Staff Engineer',
-      start: 2022,
       end: -1,
-    },
-  ],
+    }
+  },
   // all goals
   goals: [
     {
@@ -92,10 +85,10 @@ export const USER = {
   ],
   // current skill levels
   skills: [
-    { title: 'Strategic Thinking', level: 72 },
+    { title: 'Strategic Thinking', level: 65 },
     { title: 'Leadership', level: 78 },
-    { title: 'Team Management', level: 73 },
-    { title: 'Python Programming', level: 65 },
+    { title: 'Team Management', level: 62 },
+    { title: 'Python Programming', level: 66 },
   ],
   // raw feedback
   feedback: RAW_FEEDBACK,

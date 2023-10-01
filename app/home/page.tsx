@@ -50,7 +50,7 @@ export default function HomePage() {
                 {FIREBASE_USER.displayName}
               </div>
               <small className="text-sm text-muted-foreground leading-none">
-                {USER.positions[USER.positions.length - 1].title}
+                {FIREBASE_USER.currentPos}
               </small>
             </div>
             <ProfileInfo skills={USER.skills} />
