@@ -35,7 +35,7 @@ const page = () => {
           <pre className="whitespace-pre-wrap text-xs">
             {JSON.stringify(
               {
-                model: 'text-davinci-003',
+                model: 'gpt-3.5-turbo-instruct',
                 temperature: 0.6,
                 max_tokens: 500,
                 prompt: `I want you to act as a helpful career coach who gives concrete advice on career development. A user has come to you to seek advice on how to improve his technical skills to better suit his current role and facilitate his career progression. The user is currently a Senior Engineer working at PSA. What skills should he work on in order to progress to the role of Staff Engineer? Go into detail about the current trends in the industry. You MUST speak in the first person perspective, refer to the user as 'You'. Here are the user's skills given in a JSON format: [USER.SKILLS]. The user's current skill levels are rated out of a 100.`,
@@ -54,7 +54,7 @@ const page = () => {
           <pre className="whitespace-pre-wrap text-xs">
             {JSON.stringify(
               {
-                model: 'gpt-3.5-turbo-0613',
+                model: 'gpt-3.5-turbo',
                 functions: '[CUSTOM FUNCTION]',
                 prompt: `I want you to act as a helpful career coach. The user came to you to summarise the feedback received by him, give him 2 positive and 1 area for improvement. Speak in the first person perspective and refer to the user as "You"`,
               },
@@ -70,7 +70,7 @@ const page = () => {
           <pre className="whitespace-pre-wrap text-xs">
             {JSON.stringify(
               {
-                model: 'gpt-3.5-turbo-0613',
+                model: 'gpt-3.5-turbo',
                 functions: '[CUSTOM FUNCTION]',
                 prompt: `I want you to act as a helpful career coach who gives concrete advice on career development. The user is curious about the topic of interpersonal skills, and wishes to learn more about how he can build on his strengths and work on his areas for improvements. Answer the users' questions relating to interpersonal skills, limiting your responses to 4 sentences.`,
               },
